@@ -1,0 +1,21 @@
+<ion-header-bar class="bar-positive">
+	<h2 class="title">Ficha detallada</h2>
+</ion-header-bar>
+
+<ion-view>
+	<ion-content>
+		<ion-list class="list-inset">
+			<ion-item class="item-text-wrap"
+			          ng-repeat="item in peliculas | filter: { shortname: quePelicula }">
+
+				<img ng-src="img/{{item.shortname}}_tn.jpg" alt="Foto {{item.name}}">
+				<h2>{{ item.name }}</h2>
+				<h3>{{ item.director }}</h3>
+				<p>{{ item.synopsis }}</p>
+
+			</ion-item>
+		</ion-list>
+	</ion-content>
+
+
+</ion-view>
